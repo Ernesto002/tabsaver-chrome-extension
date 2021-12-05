@@ -1,6 +1,18 @@
 let myTabs = []
 const textEl = document.getElementById("text-el")
-const inputBtn = document.getElementById("input-btn")
+const saveInputBtn = document.getElementById("save-input-btn")
 const saveBtn = document.getElementById("save-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
+
+saveInputBtn.addEventListener("click", function(){
+    console.log("save input")
+})
+
+saveBtn.addEventListener("click", function(){
+    console.log("save tab")
+})
+
+deleteBtn.addEventListener("click", function(){
+    console.log("delete all")
+})
