@@ -8,6 +8,7 @@ const ulEl = document.getElementById("ul-el")
 saveInputBtn.addEventListener("click", function(){
     myTabs.push(textEl.value)
     textEl.value = ""
+    render(myTabs)
 })
 
 saveBtn.addEventListener("click", function(){
@@ -17,3 +18,17 @@ saveBtn.addEventListener("click", function(){
 deleteBtn.addEventListener("click", function(){
     console.log("delete all")
 })
+
+function render(tabs) {
+    let listTabs = ""
+    for(i = 0; i < tabs.length; i++){
+        listTabs += `
+            <li>
+                <a target='_blank' href='${tabs[i]}''>
+                    ${tabs[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listTabs
+}
