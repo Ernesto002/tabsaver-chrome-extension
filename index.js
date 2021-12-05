@@ -1,7 +1,7 @@
 let myTabs = []
 const textEl = document.getElementById("text-el")
 const saveInputBtn = document.getElementById("save-input-btn")
-const saveBtn = document.getElementById("save-btn")
+const saveTabBtn = document.getElementById("save-tab-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 
@@ -11,8 +11,12 @@ saveInputBtn.addEventListener("click", function(){
     render(myTabs)
 })
 
-saveBtn.addEventListener("click", function(){
-    console.log("save tab")
+saveTabBtn.addEventListener("click", function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myTabs", JSON.stringify(myTabs) )
+        render(myTabs)
+    })
 })
 
 deleteBtn.addEventListener("click", function(){
