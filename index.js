@@ -6,7 +6,8 @@ const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 
 saveInputBtn.addEventListener("click", function(){
-    console.log("save input")
+    myTabs.push(textEl.value)
+    console.log(myTabs)
 })
 
 saveBtn.addEventListener("click", function(){
