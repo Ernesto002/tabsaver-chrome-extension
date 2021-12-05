@@ -7,7 +7,7 @@ const ulEl = document.getElementById("ul-el")
 
 saveInputBtn.addEventListener("click", function(){
     myTabs.push(textEl.value)
-    console.log(myTabs)
+    textEl.value = ""
 })
 
 saveBtn.addEventListener("click", function(){
