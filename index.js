@@ -27,6 +27,7 @@ saveTabBtn.addEventListener("click", function(){
 })
 
 deleteBtn.addEventListener("click", function(){
+    localStorage.clear()
     myTabs = []
     render(myTabs)
 })
