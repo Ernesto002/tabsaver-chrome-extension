@@ -16,7 +16,8 @@ saveBtn.addEventListener("click", function(){
 })
 
 deleteBtn.addEventListener("click", function(){
-    console.log("delete all")
+    myTabs = []
+    render(myTabs)
 })
 
 function render(tabs) {
